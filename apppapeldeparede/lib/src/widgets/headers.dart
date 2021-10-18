@@ -14,7 +14,7 @@ class HeaderBorderRedondeados extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: 300,
+        height: 200,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.only(
             bottomLeft: Radius.circular(70),

@@ -7,7 +7,21 @@ class HeadersPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: HeaderWeaveBottom(),
+      body: Container(
+          child: Stack(
+        children: [
+          Center(
+              child: Text(
+            "Hello World",
+            style: TextStyle(
+              fontSize: 40.0,
+              fontWeight: FontWeight.w400,
+              color: Color(0xff75CCE8),
+            ),
+          )),
+          HeaderPico()
+        ],
+      )),
     );
   }
 }
