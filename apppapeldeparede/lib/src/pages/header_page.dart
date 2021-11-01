@@ -19,7 +19,7 @@ class HeadersPage extends StatelessWidget {
               color: Color(0xff75CCE8),
             ),
           )),
-          HeaderPico()
+          HeaderWavePainter()
         ],
       )),
     );
