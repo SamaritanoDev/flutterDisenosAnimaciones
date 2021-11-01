@@ -299,7 +299,7 @@ class _HeaderWavePainterPainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     final Rect rect =
         new Rect.fromCircle(
-          center: Offset(165.0, 85.0), 
+          center: Offset(165.0, 150.0), 
           radius: 180);
     final Gradient gradiente = new LinearGradient(
       //begin: Alignment.topCenter,
