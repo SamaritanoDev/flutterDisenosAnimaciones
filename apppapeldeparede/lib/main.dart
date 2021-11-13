@@ -1,4 +1,4 @@
-import 'package:apppapeldeparede/src/pages/header_page.dart';
+import 'package:apppapeldeparede/src/pages/login.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
       ),
-      home: HeadersPage(),
+      home: LoginPage(),
     );
   }
 }
