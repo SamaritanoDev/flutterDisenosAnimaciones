@@ -1,3 +1,4 @@
+import 'package:apppapeldeparede/src/widgets/cable.dart';
 import 'package:apppapeldeparede/src/widgets/wcircle.dart';
 import 'package:flutter/material.dart';
 
@@ -12,6 +13,12 @@ class Lamp extends StatelessWidget {
       width: 60,
       child: Stack(
         children: [
+          Align(          
+            alignment: Alignment(0, 0.5),
+            child: Cable(
+              height: 400,
+            ),
+          ),
           Align(
             alignment: const Alignment(0, -1),
             child: WCircle(
@@ -19,7 +26,7 @@ class Lamp extends StatelessWidget {
               color: color,
             ),
           ),
-          _MedioCircle(
+          _Bombilla(
               color: color,
               size: size,
           ),
@@ -30,8 +37,8 @@ class Lamp extends StatelessWidget {
 }
 
 
-class _MedioCircle extends StatelessWidget {
-  const _MedioCircle({Key? key, this.size, this.color}) : super(key: key);
+class _Bombilla extends StatelessWidget {
+  const _Bombilla({Key? key, this.size, this.color}) : super(key: key);
 
   final double? size;
   final Color? color;

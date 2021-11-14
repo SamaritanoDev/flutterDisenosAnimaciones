@@ -12,17 +12,28 @@ class LoginPage extends StatelessWidget {
         children: [
           Login(),
           Align(
-            alignment: Alignment(0.5, -0.75),
+            alignment: Alignment(-0.75, -0.5),
             child: Lamp(
+              size: 45,
               color: Colors.white,
             ),
           ),
           Align(
-            alignment: Alignment(0, -0.7),
+            alignment: Alignment(-0.10, -0.7),
             child: Lamp(
               size: 45,
-              color: Colors.white30,
+              color: Colors.white,
             ),
+          ),
+          Container(
+            alignment: Alignment(0, -0.4),
+            child: Text('Login',
+              style: TextStyle(
+                fontSize: 40.0,
+                fontWeight: FontWeight.w400,
+                color: Colors.white,
+              )
+            )
           )
         ],
       ),
