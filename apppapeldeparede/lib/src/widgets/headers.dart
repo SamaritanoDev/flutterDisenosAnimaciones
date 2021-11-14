@@ -360,7 +360,7 @@ class _LoginPainter extends CustomPainter {
           radius: 180
         );
     final Gradient gradiente = new LinearGradient(
-        //begin: Alignment.topCenter,
+        begin: Alignment.topCenter,
         //end: Alignment.bottomCenter,
         colors: <Color>[
           Color(0xff5157CB),

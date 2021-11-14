@@ -1,3 +1,4 @@
+import 'package:apppapeldeparede/src/widgets/lamp.dart';
 import 'package:flutter/material.dart';
 import 'package:apppapeldeparede/src/widgets/headers.dart';
 
@@ -7,21 +8,25 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-          child: Stack(
+      body: Stack(
         children: [
-          Center(
-              child: Text(
-            "Hello World",
-            style: TextStyle(
-              fontSize: 40.0,
-              fontWeight: FontWeight.w400,
-              color: Color(0xff75CCE8),
+          Login(),
+          Align(
+            alignment: Alignment(0.5, -0.75),
+            child: Lamp(
+              color: Colors.white,
             ),
-          )),
-          Login()
+          ),
+          Align(
+            alignment: Alignment(0, -0.7),
+            child: Lamp(
+              size: 45,
+              color: Colors.white30,
+            ),
+          )
         ],
-      )),
+      ),
     );
   }
 }
+
