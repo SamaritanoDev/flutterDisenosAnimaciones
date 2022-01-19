@@ -13,7 +13,6 @@ class AnimacionesPage extends StatelessWidget {
   }
 }
 
-
 class CuadradoAnimado extends StatefulWidget {
   const CuadradoAnimado({
     Key? key,
@@ -25,16 +24,14 @@ class CuadradoAnimado extends StatefulWidget {
 
 class _CuadradoAnimadoState extends State<CuadradoAnimado>
     with SingleTickerProviderStateMixin {
-
   late AnimationController controller;
-  Animation<double>? rotacion;
+  late Animation<double> rotacion;
   //instanciar
   @override
   void initState() {
     //vsync el cuadrarp tenga su resolucion adecuado, usa el mixin
     controller = AnimationController(
-        vsync: this, duration: const Duration(milliseconds: 4000)
-    );
+        vsync: this, duration: const Duration(milliseconds: 4000));
 
     rotacion = Tween(begin: 0.0, end: 2.0).animate(controller);
     super.initState();
@@ -49,7 +46,19 @@ class _CuadradoAnimadoState extends State<CuadradoAnimado>
 
   @override
   Widget build(BuildContext context) {
-    return const Center(child: _Rectangulo());
+    //play
+    controller.forward();
+    
+    return AnimatedBuilder(
+      animation: controller,
+      //child: _Rectangulo(),
+      builder: (context, child) {
+        return Transform.rotate(
+          angle: rotacion.value,
+          child: const _Rectangulo()
+          );
+      },
+    );
   }
 }
 
