@@ -27,6 +27,7 @@ class _CuadradoAnimadoState extends State<CuadradoAnimado>
     with SingleTickerProviderStateMixin {
   late AnimationController controller;
   late Animation<double> rotacion;
+  late Animation<double> opacidad;
   //instanciar
   @override
   void initState() {
@@ -35,12 +36,10 @@ class _CuadradoAnimadoState extends State<CuadradoAnimado>
         vsync: this, duration: const Duration(milliseconds: 4000));
 
     rotacion = Tween(begin: 0.0, end: 2 * math.pi).animate(
-        CurvedAnimation(
-          parent: controller, 
-          curve: Curves.easeOutBack)
-        );
+        CurvedAnimation(parent: controller, curve: Curves.easeOutBack));
     super.initState();
 
+    opacidad = Tween(begin: 0.1, end: 1.0).animate(controller);
     //escuchando los eventos
     controller.addListener(() {
       print('status: ${controller.status}');
@@ -66,10 +65,15 @@ class _CuadradoAnimadoState extends State<CuadradoAnimado>
 
     return AnimatedBuilder(
       animation: controller,
-      //child: _Rectangulo(),
-      builder: (context, child) {
+      child: const _Rectangulo(),
+      builder: (context, childRectangulo) {
         return Transform.rotate(
-            angle: rotacion.value, child: const _Rectangulo());
+            angle: rotacion.value, 
+            child: Opacity(
+              opacity: opacidad.value,
+              child: childRectangulo,
+            )
+            );
       },
     );
   }
