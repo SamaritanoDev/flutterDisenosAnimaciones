@@ -34,14 +34,19 @@ class _CuadradoAnimadoState extends State<CuadradoAnimado>
     controller = AnimationController(
         vsync: this, duration: const Duration(milliseconds: 4000));
 
-    rotacion = Tween(begin: 0.0, end: 2 * math.pi).animate(controller);
+    rotacion = Tween(begin: 0.0, end: 2 * math.pi).animate(
+        CurvedAnimation(
+          parent: controller, 
+          curve: Curves.easeOutBack)
+        );
     super.initState();
 
     //escuchando los eventos
     controller.addListener(() {
       print('status: ${controller.status}');
       if (controller.status == AnimationStatus.completed) {
-        controller.reverse();
+        //controller.reverse();
+        controller.reset();
       }
     });
   }
@@ -58,7 +63,7 @@ class _CuadradoAnimadoState extends State<CuadradoAnimado>
     //play- reproduccion
     controller.forward();
     //controller.repeat();
-    
+
     return AnimatedBuilder(
       animation: controller,
       //child: _Rectangulo(),
