@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math' as math;
 
 class AnimacionesPage extends StatelessWidget {
   const AnimacionesPage({Key? key}) : super(key: key);
@@ -33,8 +34,16 @@ class _CuadradoAnimadoState extends State<CuadradoAnimado>
     controller = AnimationController(
         vsync: this, duration: const Duration(milliseconds: 4000));
 
-    rotacion = Tween(begin: 0.0, end: 2.0).animate(controller);
+    rotacion = Tween(begin: 0.0, end: 2 * math.pi).animate(controller);
     super.initState();
+
+    //escuchando los eventos
+    controller.addListener(() {
+      print('status: ${controller.status}');
+      if (controller.status == AnimationStatus.completed) {
+        controller.reverse();
+      }
+    });
   }
 
   @override
@@ -46,17 +55,16 @@ class _CuadradoAnimadoState extends State<CuadradoAnimado>
 
   @override
   Widget build(BuildContext context) {
-    //play
+    //play- reproduccion
     controller.forward();
+    //controller.repeat();
     
     return AnimatedBuilder(
       animation: controller,
       //child: _Rectangulo(),
       builder: (context, child) {
         return Transform.rotate(
-          angle: rotacion.value,
-          child: const _Rectangulo()
-          );
+            angle: rotacion.value, child: const _Rectangulo());
       },
     );
   }
