@@ -8,3 +8,4 @@ export '../widgets/header_square.dart';
 export '../widgets/header_triangular.dart';
 export '../widgets/header_weave_bottom.dart';
 export '../widgets/header_weave.dart';
+export '../widgets/header_top_bottom.dart';

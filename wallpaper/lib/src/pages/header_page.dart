@@ -18,7 +18,7 @@ class HeadersPage extends StatelessWidget {
               color: Color.fromARGB(255, 8, 11, 12),
             ),
           )),
-          HeaderWaveGradient()
+          HeaderWaveGradientTop()
         ],
       ),
     );
