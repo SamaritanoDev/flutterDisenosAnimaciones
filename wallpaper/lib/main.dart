@@ -1,12 +1,14 @@
-import 'package:apppapeldeparede/src/pages/login_page.dart';
+import 'package:wallpaper/src/pages/login_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 /// The MyApp class is a StatelessWidget that returns a MaterialApp widget
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -15,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
       ),
-      home: LoginPage(),
+      home: const LoginPage(),
     );
   }
 }

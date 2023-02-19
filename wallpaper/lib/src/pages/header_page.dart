@@ -7,9 +7,8 @@ class HeadersPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-          child: Stack(
-        children: [
+      body: Stack(
+        children: const [
           Center(
               child: Text(
             "Hello World",
@@ -21,7 +20,7 @@ class HeadersPage extends StatelessWidget {
           )),
           HeaderWaveGradient()
         ],
-      )),
+      ),
     );
   }
 }
