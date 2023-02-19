@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../const.dart';
+
 //header triangular
 class HeaderTriangular extends StatelessWidget {
   const HeaderTriangular({super.key});
@@ -22,7 +24,7 @@ class _HeaderTriangularPainter extends CustomPainter {
     final paint = Paint();
 
     //propiedades del lapiz
-    paint.color = const Color(0xffCD60DA);
+    paint.color = ColorsMyApp.primarycolor;
     paint.style = PaintingStyle.fill; //fill despues
     paint.strokeWidth = 20;
 

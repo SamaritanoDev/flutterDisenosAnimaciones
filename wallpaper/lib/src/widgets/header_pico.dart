@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../const.dart';
+
 //header pico
 class HeaderPico extends StatelessWidget {
   const HeaderPico({super.key});
@@ -22,7 +24,7 @@ class _HeaderPicoPainter extends CustomPainter {
     final paint = Paint();
 
     //propiedades del lapiz
-    paint.color = const Color(0xffCD60DA);
+    paint.color = ColorsMyApp.optionalcolor;
     paint.style = PaintingStyle.fill; //fill despues
     paint.strokeWidth = 20;
 

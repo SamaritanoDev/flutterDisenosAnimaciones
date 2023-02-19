@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../const.dart';
+
 /// It's a container that takes up all the space it can, and paints a diagonal line on it
 class HeaderDiagonal extends StatelessWidget {
   const HeaderDiagonal({super.key});
@@ -22,7 +24,7 @@ class _HeaderDiagonalPainter extends CustomPainter {
     final paint = Paint();
 
     //propiedades del lapiz
-    paint.color = const Color(0xffCD60DA);
+    paint.color = ColorsMyApp.tertiarycolor;
     paint.style = PaintingStyle.fill; //fill despues
     paint.strokeWidth = 20;
 

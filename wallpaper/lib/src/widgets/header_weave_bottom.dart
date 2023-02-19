@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../const.dart';
+
 //Header weave bottom
 class HeaderWeaveBottom extends StatelessWidget {
   const HeaderWeaveBottom({super.key});
@@ -22,7 +24,7 @@ class _HeaderWeaveBottomPainter extends CustomPainter {
     final paint = Paint();
 
     //propiedades del lapiz
-    paint.color = const Color(0xffCD60DA);
+    paint.color = ColorsMyApp.secondarycolor;
     paint.style = PaintingStyle.fill;
     paint.strokeWidth = 20;
 

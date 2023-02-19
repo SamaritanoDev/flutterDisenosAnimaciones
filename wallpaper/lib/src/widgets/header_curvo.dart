@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../const.dart';
+
 //Header Curvo
 class HeaderCurvo extends StatelessWidget {
   const HeaderCurvo({super.key});
@@ -22,7 +24,7 @@ class _HeaderCurvoPainter extends CustomPainter {
     final paint = Paint();
 
     //propiedades del lapiz
-    paint.color = const Color(0xffCD60DA);
+    paint.color = ColorsMyApp.secondarycolor;
     paint.style = PaintingStyle.fill; //fill despues
     paint.strokeWidth = 20;
 

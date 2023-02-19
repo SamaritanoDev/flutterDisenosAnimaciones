@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../widgets/widgets.dart';
+import 'package:wallpaper/src/widgets/widgets.dart';
 
 class HeadersPage extends StatelessWidget {
   const HeadersPage({Key? key}) : super(key: key);
@@ -18,7 +18,7 @@ class HeadersPage extends StatelessWidget {
               color: Color.fromARGB(255, 8, 11, 12),
             ),
           )),
-          HeaderDiagonal()
+          HeaderWaveGradient()
         ],
       ),
     );

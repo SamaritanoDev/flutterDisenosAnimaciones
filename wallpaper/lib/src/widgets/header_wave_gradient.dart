@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../const.dart';
 
 //Header Wave Gradient
 class HeaderWaveGradient extends StatelessWidget {
@@ -25,14 +26,14 @@ class _HeaderWaveGradientPainter extends CustomPainter {
         //begin: Alignment.topCenter,
         //end: Alignment.bottomCenter,
         colors: <Color>[
-          Color(0xff75cce8),
-          Color(0xffa5dee5),
-          Color(0xfff7db70)
+          ColorsMyApp.primarycolor,
+          ColorsMyApp.secondarycolor,
+          ColorsMyApp.tertiarycolor
         ]);
     final paint = Paint()..shader = gradiente.createShader(rect);
 
     //propiedades del lapiz
-    paint.color = const Color(0xffCD60DA);
+    paint.color = ColorsMyApp.tertiarycolor;
     paint.style = PaintingStyle.fill;
     paint.strokeWidth = 20;
 
