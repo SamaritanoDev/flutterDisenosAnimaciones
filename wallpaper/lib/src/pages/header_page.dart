@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../widgets/header_wave_gradient.dart';
+import '../widgets/widgets.dart';
 
 class HeadersPage extends StatelessWidget {
   const HeadersPage({Key? key}) : super(key: key);
@@ -15,10 +15,10 @@ class HeadersPage extends StatelessWidget {
             style: TextStyle(
               fontSize: 40.0,
               fontWeight: FontWeight.w400,
-              color: Color(0xff75CCE8),
+              color: Color.fromARGB(255, 8, 11, 12),
             ),
           )),
-          HeaderWaveGradient()
+          HeaderDiagonal()
         ],
       ),
     );
